@@ -321,6 +321,45 @@ ul.menu {
     text-align: center;
 }
 
+.customers-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.customers-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.customer-list-item {
+    flex-basis: calc((100% - 5 * 24px) / 6);
+}
+
+.customers-title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--primary-dark-color);
+}
+
+.customer-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 8px;
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
+}
+
+.customer-icon {
+    fill: var(--subtle-text-color);
+}
+
 /* ================ PORTFOLIO PAGE ================*/
 
 .portfolio {
