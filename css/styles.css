@@ -383,7 +383,7 @@ ul.menu {
 }
 
 .employee-social-list-icon {
-    fill: currentColor;
+    fill: #f4f4fd;
     transition: fill var(--transition-dur-and-func);
 }
 
@@ -568,7 +568,10 @@ ul.menu {
     transition: transform var(--transition-dur-and-func);
 }
 
-.portfolio-list-item:hover .overlay,
+.portfolio-list-item:hover .overlay {
+    transform: translateY(0%);
+}
+
 .portfolio-list-item:focus .overlay {
     transform: translateY(0%);
 }
@@ -643,7 +646,7 @@ footer {
 }
 
 .social-list-icon {
-    fill: currentColor;
+    fill: #f4f4fd;
 }
 
 .social-list-link:hover .social-list-icon,
