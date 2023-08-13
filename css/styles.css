@@ -383,7 +383,7 @@ ul.menu {
 }
 
 .employee-social-list-icon {
-    fill: currentColor;
+    fill: var(--primary-light-color);
     transition: fill var(--transition-dur-and-func);
 }
 
