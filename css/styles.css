@@ -627,7 +627,6 @@ footer {
     align-items: center;
     width: 40px;
     height: 40px;
-    color: var(--primary-light-color);
     background-color: var(--primary-brand-color);
     border-radius: 50%;
     transition: background-color var(--transition-dur-and-func);
@@ -636,16 +635,10 @@ footer {
 .social-list-link:hover,
 .social-list-link:focus {
     background-color: #31D0AA;
-    color: var(--accent-color);
 }
 
 .social-list-icon {
-    fill: currentColor;
-}
-
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-    fill: currentColor;
+    fill: var(--primary-light-color);
 }
 
 /* ================ BACKDROP ================ */
