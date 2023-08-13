@@ -379,17 +379,10 @@ ul.menu {
 .employee-social-list-link:hover,
 .employee-social-list-link:focus {
     background-color: var(--pressed-state-color);
-    color: var(--accent-color);
 }
 
 .employee-social-list-icon {
-    fill: currentColor;
-    transition: fill var(--transition-dur-and-func);
-}
-
-.employee-social-list-link:hover .employee-social-list-icon,
-.employee-social-list-link:focus .employee-social-list-icon {
-    fill: currentColor;
+    fill: var(--primary-light-color);
 }
 
 .customers-section {
