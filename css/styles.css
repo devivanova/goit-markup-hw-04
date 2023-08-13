@@ -7,7 +7,7 @@
     --primary-white-color: #ffffff;
     --success-color: #31D0AA;
     --text-color: #434455;
-    --subtle-text-color: #8E8F99;
+    --subtle-text-color: ;
     --accent-color: #E7E9FC;
     --modal-background-color: #FCFCFC;
     --primary-font: 'Roboto', sans-serif;
@@ -382,7 +382,7 @@ ul.menu {
 }
 
 .employee-social-list-icon {
-    fill: var(--primary-light-color);
+    fill: #f4f4fd;
     transition: fill var(--transition-dur-and-func);
 }
 
@@ -405,8 +405,6 @@ ul.menu {
 .customer-list-item {
     flex-basis: calc((100% - 5 * 24px) / 6);
     height: 88px;
-    transition: border-color var(--transition-dur-and-func),
-        fill var(--transition-dur-and-func);
 }
 
 .customers-title {
@@ -430,6 +428,8 @@ ul.menu {
     padding-bottom: 24px;
     margin-bottom: 8px;
     color: var(--subtle-text-color);
+    transition: border-color var(--transition-dur-and-func),
+        fill var(--transition-dur-and-func);
 }
 
 .customer-icon {
@@ -705,9 +705,13 @@ footer {
         border var(--transition-dur-and-func);
 }
 
-.close-btn:hover,
+.close-btn:hover {
+    background-color: var(--pressed-state-color);
+    border: none;
+}
+
 .close-btn:focus {
-    background-color: var(--primary-white-color);
+    background-color: var(--pressed-state-color);
     border: none;
 }
 
@@ -716,7 +720,10 @@ footer {
     transition: fill var(--transition-dur-and-func);
 }
 
-.close-btn-icon:hover,
+.close-btn-icon:hover {
+    fill: var(--primary-white-color);
+}
+
 .close-btn-icon:focus {
     fill: var(--primary-white-color);
 }
