@@ -498,9 +498,17 @@ ul.menu {
 
 .portfolio-list-item {
     flex-basis: calc((100% - 2 * 24px) / 3);
-    transition: color var(transition-dur-and-func),
-        background-color var(transition-dur-and-func),
-        border-color var(transition-dur-and-func);
+}
+
+.portfolio-list-item-img-wrapper {
+    transition: box-shadow var(transition-dur-and-func);
+}
+
+.portfolio-list-item:hover .portfolio-list-item-img-wrapper,
+.portfolio-list-item:focus .portfolio-list-item-img-wrapper {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-list-item-link {
@@ -623,9 +631,9 @@ footer {
     align-items: center;
     width: 40px;
     height: 40px;
-    color: var(--primary-light-color);
     background-color: var(--primary-brand-color);
     border-radius: 50%;
+    transition: background-color var(--transition-dur-and-func);
 }
 
 .social-list-link:hover,
