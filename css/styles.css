@@ -383,7 +383,7 @@ ul.menu {
 }
 
 .employee-social-list-icon {
-    fill: #f4f4fd;
+    fill: currentColor;
     transition: fill var(--transition-dur-and-func);
 }
 
@@ -512,7 +512,7 @@ ul.menu {
 
 .portfolio-list-item-link {
     display: block;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(transition-dur-and-func);
 }
 
 .portfolio-list-item-link:hover,
@@ -572,7 +572,7 @@ ul.menu {
     transform: translateY(0%);
 }
 
-.portfolio-list-item:focus .overlay {
+.portfolio-list-item-link:focus .overlay {
     transform: translateY(0%);
 }
 
@@ -646,7 +646,7 @@ footer {
 }
 
 .social-list-icon {
-    fill: #f4f4fd;
+    fill: currentColor;
 }
 
 .social-list-link:hover .social-list-icon,
