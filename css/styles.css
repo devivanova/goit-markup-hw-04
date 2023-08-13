@@ -568,8 +568,8 @@ ul.menu {
     transition: transform var(--transition-dur-and-func);
 }
 
-.portfolio-list-item-link:hover,
-.portfolio-list-item-link:focus {
+.portfolio-list-item:hover .overlay,
+.portfolio-list-item:focus .overlay {
     transform: translateY(0%);
 }
 
