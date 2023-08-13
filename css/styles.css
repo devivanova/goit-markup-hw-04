@@ -371,7 +371,7 @@ ul.menu {
     width: 100%;
     height: 100%;
     background-color: var(--primary-brand-color);
-    fill: var(--primary-white-color);
+    color: var(--primary-light-color);
     border-radius: 50%;
     transition: background-color var(--transition-dur-and-func);
 }
@@ -379,16 +379,17 @@ ul.menu {
 .employee-social-list-link:hover,
 .employee-social-list-link:focus {
     background-color: var(--pressed-state-color);
+    color: var(--accent-color);
 }
 
 .employee-social-list-icon {
-    fill: #f4f4fd;
+    fill: currentColor;
     transition: fill var(--transition-dur-and-func);
 }
 
 .employee-social-list-link:hover .employee-social-list-icon,
 .employee-social-list-link:focus .employee-social-list-icon {
-    fill: var(--accent-color);
+    fill: currentColor;
 }
 
 .customers-section {
@@ -441,7 +442,7 @@ ul.menu {
 
 .customer-icon:hover,
 .customer-icon:focus {
-    fill: var(--pressed-state-color);
+    fill: currentColor;
 }
 
 .customer-list-item-link:hover,
@@ -630,7 +631,7 @@ footer {
     align-items: center;
     width: 40px;
     height: 40px;
-    fill: var(--primary-white-color);
+    color: var(--primary-white-color);
     background-color: var(--primary-brand-color);
     border-radius: 50%;
     transition: background-color var(--transition-dur-and-func);
@@ -639,16 +640,16 @@ footer {
 .social-list-link:hover,
 .social-list-link:focus {
     background-color: #31D0AA;
+    color: var(--accent-color);
 }
 
 .social-list-icon {
-    fill: #f4f4fd;
-    transition: fill var(--primary-light-color);
+    fill: currentColor;
 }
 
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
-    fill: var(--accent-color);
+    fill: currentColor;
 }
 
 /* ================ BACKDROP ================ */
@@ -703,28 +704,23 @@ footer {
     background-color: var(--accent-color);
     transition: background-color var(--transition-dur-and-func), 
         border var(--transition-dur-and-func);
+    color: var(--primary-dark-color);
 }
 
-.close-btn:hover {
-    background-color: var(--pressed-state-color);
-    border: none;
-}
-
+.close-btn:hover,
 .close-btn:focus {
     background-color: var(--pressed-state-color);
     border: none;
+    color: var(--primary-white-color);
 }
 
 .close-btn-icon {
-    fill: var(--primary-dark-color);
+    fill: currentColor;
     transition: fill var(--transition-dur-and-func);
 }
 
-.close-btn-icon:hover {
-    fill: var(--primary-white-color);
-}
-
+.close-btn-icon:hover,
 .close-btn-icon:focus {
-    fill: var(--primary-white-color);
+    fill: currentColor;
 }
 
