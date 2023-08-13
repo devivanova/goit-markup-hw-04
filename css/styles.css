@@ -101,6 +101,9 @@ body {
 
 .page-header {
     border-bottom: 1px solid var(--accent-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -174,18 +177,19 @@ ul.menu {
     content: "";
     border-radius: 2px;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
 }
 
 /* ================ MAIN PAGE ================*/
 
 .hero-image {
     padding: 188px 0;
-}
-.hero-image {
+    max-width: 1440px;
     background-color: var(--primary-dark-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .title {
@@ -255,6 +259,7 @@ ul.menu {
     padding-bottom: 24px;
     margin-bottom: 8px;
     background-color: var(--primary-light-color);
+    border-radius: 4px;
 }
 
 .advantage-title {
@@ -310,9 +315,9 @@ ul.menu {
     width: calc((100% - 72px) / 4);
     background-color: var(--primary-white-color);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px #2E2F4214;
-    box-shadow: 0px 1px 1px 0px #2E2F4229;
-    box-shadow: 0px 1px 6px 0px #2E2F4214;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .our-team-title {
@@ -347,20 +352,26 @@ ul.menu {
 
 .employee-social-list {
     display: flex;
-    column-gap: 24px;
+    justify-content: center;
+    gap: 24px;
     padding-top: 8px;
     padding-left: 16px;
     padding-right: 16px;
 }
 
-.employee-social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.employee-social-list-item {
     width: 40px;
     height: 40px;
-    fill: var(--primary-white-color);
+}
+
+.employee-social-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     background-color: var(--primary-brand-color);
+    fill: var(--primary-white-color);
     border-radius: 50%;
     transition: background-color var(--transition-dur-and-func);
 }
@@ -392,6 +403,7 @@ ul.menu {
 
 .customer-list-item {
     flex-basis: calc((100% - 5 * 24px) / 6);
+    height: 88px;
 }
 
 .customers-title {
@@ -403,30 +415,39 @@ ul.menu {
     color: var(--primary-dark-color);
 }
 
-.customer-icon-wrapper {
+.customer-list-item-link {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 24px;
     padding-bottom: 24px;
     margin-bottom: 8px;
-    border: 1px solid var(--subtle-text-color);
-    border-radius: 4px;
-    transition: border-color var(--transition-dur-and-func);
-}
-
-.customer-icon-wrapper:hover {
-    border-color: var(--pressed-state-color);
+    transition: border-color var(--transition-dur-and-func),
+    fill var(--transition-dur-and-func);
 }
 
 .customer-icon {
     fill: var(--subtle-text-color);
-    transition: fill var(--transition-dur-and-func);
+    width: 104px;
+    height: 56px;
+
 }
 
-.customer-icon:hover {
+.customer-icon:hover,
+.customer-icon:focus {
     fill: var(--pressed-state-color);
 }
+
+.customer-list-item-link:hover,
+.customer-list-item-link:focus {
+    border-color: var(--pressed-state-color);
+}
+
+
 
 /* ================ PORTFOLIO PAGE ================*/
 
@@ -464,9 +485,9 @@ ul.menu {
     background-color: var(--pressed-state-color);
     color: var(--primary-white-color);
     border: 1px solid transparent;
-    box-shadow: 0px 2px 2px 0px #0000001F;
-    box-shadow: 0px 2px 1px 0px #00000014;
-    box-shadow: 0px 3px 1px 0px #0000001A;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+        0px 2px 1px rgba(0, 0, 0, 0.08), 
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -477,14 +498,19 @@ ul.menu {
 }
 
 .portfolio-list-item {
+    display: block;
     flex-basis: calc((100% - 2 * 24px) / 3);
-    transition: box-shadow var(--transition-dur-and-func);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover {
-    box-shadow: 0px 2px 1px 0px #2E2F4214;
-    box-shadow: 0px 1px 1px 0px #2E2F4229;
-    box-shadow: 0px 1px 6px 0px #2E2F4214;
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+        0px 1px 1px rgba(46, 47, 66, 0.16), 
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .span-header {
@@ -542,6 +568,7 @@ ul.menu {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .social-list-container {
@@ -576,12 +603,16 @@ footer {
 
 .social-list-title {
     margin-bottom: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     color: var(--primary-white-color);
+    font-size: 16px;
 }
 
 .social-list {
     display: flex;
-    column-gap: 16px;
+    gap: 16px;
 }
 
 .social-list-link {
@@ -602,7 +633,8 @@ footer {
 }
 
 .social-list-icon {
-    transition: fill var(--primary-white-color);
+    fill: var(--primary-white-color);
+    transition: fill var(--primary-light-color);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -619,8 +651,7 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-
-    transition: opacity 500ms linear, visibility 500ms linear;
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
 }
 
 .is-hidden {
@@ -638,12 +669,20 @@ footer {
     transform: translate(-50%, -50%);
     width: 408px;
     height: 584px;
-    background-color: var(--primary-white-color);
+    background-color: var(--modal-background-color);
     border-radius: 4px;
+    min-height: 584px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 
+        0px 1px 3px rgba(0, 0, 0, 0.12), 
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-dur-and-func);
 }
 
 .close-btn {
+    display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     top: 24px;
     right: 24px;
     padding: 0;
@@ -653,9 +692,23 @@ footer {
     width: 24px;
     height: 24px;
     background-color: var(--accent-color);
+    transition: background-color var(--transition-dur-and-func), 
+        border var(--transition-dur-and-func);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background-color: var(--pressed-state-color);
+    border: none;
 }
 
 .close-btn-icon {
-    stroke: var(--primary-dark-color);
+    fill: var(--primary-dark-color);
+    transition: fill var(--transition-dur-and-func);
+}
+
+.close-btn-icon:hover,
+.close-btn-icon:focus {
+    fill: var(--primary-white-color);
 }
 
