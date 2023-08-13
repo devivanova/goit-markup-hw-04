@@ -500,7 +500,7 @@ ul.menu {
     flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
-.portfolio-list-item-img-wrapper {
+.portfolio-list-item .portfolio-list-item-img-wrapper {
     transition: box-shadow var(transition-dur-and-func);
 }
 
