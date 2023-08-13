@@ -382,7 +382,8 @@ ul.menu {
 }
 
 .employee-social-list-icon {
-    transition: fill var(--primary-light-color);
+    fill: var(--primary-light-color);
+    transition: fill var(--transition-dur-and-func);
 }
 
 .employee-social-list-link:hover .employee-social-list-icon,
@@ -404,6 +405,8 @@ ul.menu {
 .customer-list-item {
     flex-basis: calc((100% - 5 * 24px) / 6);
     height: 88px;
+    transition: border-color var(--transition-dur-and-func),
+        fill var(--transition-dur-and-func);
 }
 
 .customers-title {
@@ -426,8 +429,6 @@ ul.menu {
     padding-top: 24px;
     padding-bottom: 24px;
     margin-bottom: 8px;
-    transition: border-color var(--transition-dur-and-func),
-    fill var(--transition-dur-and-func);
     color: var(--subtle-text-color);
 }
 
@@ -502,9 +503,9 @@ ul.menu {
 .portfolio-list-item {
     flex-basis: calc((100% - 2 * 24px) / 3);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item-link {
@@ -564,7 +565,10 @@ ul.menu {
     transition: transform var(--transition-dur-and-func);
 }
 
-.portfolio-list-item:hover .overlay,
+.portfolio-list-item:hover .overlay {
+    transform: translateY(0%);
+}
+
 .portfolio-list-item:focus .overlay {
     transform: translateY(0%);
 }
@@ -638,7 +642,7 @@ footer {
 }
 
 .social-list-icon {
-    fill: var(--primary-light-color);
+    fill: #f4f4fd;
     transition: fill var(--primary-light-color);
 }
 
@@ -703,7 +707,7 @@ footer {
 
 .close-btn:hover,
 .close-btn:focus {
-    background-color: var(--pressed-state-color);
+    background-color: var(--primary-white-color);
     border: none;
 }
 
