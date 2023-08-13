@@ -7,7 +7,7 @@
     --primary-white-color: #ffffff;
     --success-color: #31D0AA;
     --text-color: #434455;
-    --subtle-text-color: ;
+    --subtle-text-color: #8e8f99;
     --accent-color: #E7E9FC;
     --modal-background-color: #FCFCFC;
     --primary-font: 'Roboto', sans-serif;
@@ -406,6 +406,8 @@ ul.menu {
 .customer-list-item {
     flex-basis: calc((100% - 5 * 24px) / 6);
     height: 88px;
+    transition: border-color var(--transition-dur-and-func),
+        color var(--transition-dur-and-func);
 }
 
 .customers-title {
@@ -566,11 +568,8 @@ ul.menu {
     transition: transform var(--transition-dur-and-func);
 }
 
-.portfolio-list-item:hover .overlay {
-    transform: translateY(0%);
-}
-
-.portfolio-list-item:focus .overlay {
+.portfolio-list-item-link:hover,
+.portfolio-list-item-link:focus {
     transform: translateY(0%);
 }
 
@@ -631,7 +630,7 @@ footer {
     align-items: center;
     width: 40px;
     height: 40px;
-    color: var(--primary-white-color);
+    color: var(--primary-light-color);
     background-color: var(--primary-brand-color);
     border-radius: 50%;
     transition: background-color var(--transition-dur-and-func);
@@ -711,7 +710,7 @@ footer {
 .close-btn:focus {
     background-color: var(--pressed-state-color);
     border: none;
-    color: var(--primary-white-color);
+    color: #ffffff;
 }
 
 .close-btn-icon {
